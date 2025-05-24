@@ -1,0 +1,133 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA;
+    color: #2A5356;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #2A5356;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #F0F0F0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2A5356;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #376F71;
+}
+
+/* Section Objectifs */
+main {
+    padding: 2rem;
+}
+
+#objectifs {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.objectifs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.objectif-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.objectif-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.objectif-item h3 {
+    font-size: 1.5rem;
+    color: #2A5356;
+    margin-bottom: 1rem;
+}
+
+.objectif-item p {
+    color: #555;
+}
+
+.add-objectif {
+    margin-top: 2rem;
+}
+
+.add-objectif .btn {
+    background-color: #376F71;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.add-objectif .btn:hover {
+    background-color: #2A5356;
+}
+
+/* Pied de page */
+footer {
+    background-color: #2A5356;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #A0D6D1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}

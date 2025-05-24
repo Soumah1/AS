@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Notes</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+<body>
+    <!-- Vérification d'authentification -->
+    <script>
+        if (!sessionStorage.getItem("authenticated")) {
+            alert("Veuillez vous connecter pour accéder à ce module.");
+            window.location.href = "connexion.html"; // Redirection vers la page de connexion
+        }
+    </script>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Gestion des Notes</h1>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cours.html">Cours</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section principale -->
+    <main>
+        <!-- Formulaire pour ajouter une note -->
+        <section>
+            <h2>Ajouter une Note</h2>
+            <form id="add-note-form">
+                <div>
+                    <label for="subject">Matière :</label>
+                    <input type="text" id="subject" placeholder="Ex : Mathématiques" required>
+                </div>
+                <div>
+                    <label for="grade">Note :</label>
+                    <input type="number" id="grade" min="0" max="20" placeholder="Ex : 15" required>
+                </div>
+                <div>
+                    <label for="appreciation">Appréciation :</label>
+                    <textarea id="appreciation" placeholder="Ex : Très bien !" required></textarea>
+                </div>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <!-- Liste des notes -->
+        <section>
+            <h2>Mes Notes</h2>
+            <ul id="notes-container">
+                <!-- Les notes seront ajoutées ici dynamiquement -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Site Scolaire</p>
+    </footer>
+
+    <script src="note.js"></script>
+</body>
+</html>

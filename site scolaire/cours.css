@@ -1,0 +1,175 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA;
+    color: #2A5356;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #2A5356;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #F0F0F0;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2A5356;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #376F71;
+}
+
+/* Section Cours */
+main {
+    padding: 2rem;
+}
+
+#cours {
+    margin-top: 2rem;
+}
+
+.cours-module {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cours-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cours-item h3 {
+    font-size: 1.5rem;
+    color: #2A5356;
+    margin-bottom: 1rem;
+}
+
+.cours-item p {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.cours-item a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #2A5356;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cours-item a:hover {
+    background-color: #376F71;
+}
+
+.add-course {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.add-course .btn {
+    background-color: #376F71;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.add-course .btn:hover {
+    background-color: #2A5356;
+}
+
+/* Pied de page */
+footer {
+    background-color: #2A5356; /* Vert principal */
+    color: white; /* Texte blanc */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile en haut */
+}
+
+footer .footer-info,
+footer .footer-contact {
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #A0D6D1; /* Vert clair pour les liens */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #FFFFFF; /* Blanc au survol */
+}
+
+footer .footer-info strong {
+    font-weight: bold;
+}
+
+footer .footer-contact a {
+    font-size: 1rem;
+}
+
+footer p:last-child {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #C1C1C1; /* Gris clair pour le texte secondaire */
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header,
+main,
+footer {
+    animation: fadeIn 1s ease-in-out;
+}

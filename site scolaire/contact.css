@@ -1,0 +1,103 @@
+/* Configuration générale */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F9FA;
+    color: #2A5356;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2A5356;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #2A5356;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.form-actions button {
+    background-color: #2A5356;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-actions button:hover {
+    background-color: #376F71;
+}
+
+footer {
+    background-color: #2A5356;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer ul li a:hover {
+    color: #A0D6D1;
+}

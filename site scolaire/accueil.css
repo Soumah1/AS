@@ -1,0 +1,199 @@
+/* Configuration générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Police moderne */
+}
+
+body {
+    background-color: #F8F9FA; /* Blanc cassé pour le fond général */
+    color: #2A5356; /* Vert sombre pour le texte */
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #2A5356; /* Vert principal */
+    color: #FFFFFF; /* Texte blanc */
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Barre de navigation */
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la barre de navigation */
+    align-items: center;
+    background-color: #F0F0F0; /* Gris clair */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Centre les éléments de la liste horizontalement */
+    margin: 0; /* Retire la marge par défaut */
+    padding: 0; /* Retire le padding par défaut */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Espacement entre les éléments */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2A5356;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #376F71; /* Vert légèrement plus clair */
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #2A5356;
+}
+
+.search-bar button {
+    background-color: #2A5356;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #376F71;
+}
+
+/* Section principale */
+main {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 1200px;
+    text-align: center;
+}
+
+main #image-principale img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modules */
+#modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+#modules article {
+    background-color: #FFFFFF; /* Fond blanc */
+    border: 1px solid #DDD; /* Bordure légère */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#modules article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#modules article h3 {
+    font-size: 1.5rem;
+    color: #2A5356;
+    margin-bottom: 1rem;
+}
+
+#modules article p {
+    color: #555; /* Texte gris doux */
+}
+
+/* Pied de page */
+footer {
+    background-color: #2A5356;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+}
+
+footer section {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #A0D6D1; /* Vert clair agréable */
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header,
+main,
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
+#modules a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Hérite de la couleur du texte parent */
+}
+
+#modules a:hover {
+    color: #2A5356; /* Change la couleur lors du survol */
+    text-decoration: none; /* Assure qu'il n'y a pas de soulignement au survol */
+}

@@ -1,0 +1,157 @@
+/* Configuration générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F8F9FA; /* Blanc cassé */
+    color: #2A5356; /* Vert sombre */
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background-color: #2A5356; /* Vert principal */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section principale */
+main {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Conteneur de la page de connexion */
+.login-container {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Titre de la page */
+.login-container h2 {
+    font-size: 2rem;
+    color: #2A5356;
+    margin-bottom: 1.5rem;
+}
+
+/* Style pour le formulaire */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    padding: 0.75rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2A5356;
+}
+
+/* Bouton de connexion */
+.form-actions button {
+    background-color: #2A5356;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-actions button:hover {
+    background-color: #376F71;
+}
+
+/* Lien mot de passe oublié */
+.forgot-password {
+    color: #2A5356;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer {
+    background-color: #2A5356;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer section {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #A0D6D1;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header,
+main,
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
