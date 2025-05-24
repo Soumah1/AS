@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Soumah </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Arrière-plan principal très sombre */
+            color: #EAEAEA; /* Texte principal blanc cassé */
+        }
+        .accent-color {
+            color: #007BFF; /* Bleu électrique */
+        }
+        .bg-accent {
+            background-color: #007BFF;
+        }
+        .border-accent {
+            border-color: #007BFF;
+        }
+        .hover-bg-accent-darker:hover {
+            background-color: #0056b3; /* Bleu électrique plus foncé au survol */
+        }
+        .section-title {
+            font-size: 2.5rem; /* 40px */
+            font-weight: 700;
+            margin-bottom: 2rem; /* 32px */
+            text-align: center;
+        }
+        .section-subtitle {
+            font-size: 1.25rem; /* 20px */
+            color: #A0A0A0; /* Gris clair pour sous-titres */
+            text-align: center;
+            margin-bottom: 3rem; /* 48px */
+        }
+        .card {
+            background-color: #1A1A2E; /* Fond des cartes légèrement plus clair */
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* Added to ensure consistent card height if content varies */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 123, 255, 0.2); /* Ombre accentuée au survol */
+        }
+        .tag {
+            background-color: #2F2F4A; /* Fond des tags */
+            color: #00C6FF; /* Couleur du texte des tags (bleu cyan pour contraster) */
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem; /* 6px */
+            font-size: 0.875rem; /* 14px */
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        /* Custom scrollbar (optional, for Webkit browsers) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1A2E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #007BFF;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+        .hero-button {
+            display: inline-block; /* Ensures buttons are on the same line and respect margins */
+            margin-top: 0.5rem; /* Adds some space if buttons wrap on small screens */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-opacity-80 bg-[#1A1A2E] backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold accent-color">AS</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#accueil" class="py-2 px-3 hover:text-blue-400 transition duration-300">Accueil</a>
+                    <a href="#a-propos" class="py-2 px-3 hover:text-blue-400 transition duration-300">À Propos</a>
+                    <a href="#projets" class="py-2 px-3 hover:text-blue-400 transition duration-300">Projets</a>
+                    <a href="#contact" class="py-2 px-3 hover:text-blue-400 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3">
+                <a href="#accueil" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Accueil</a>
+                <a href="#a-propos" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">À Propos</a>
+                <a href="#projets" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Projets</a>
+                <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="accueil" class="min-h-screen flex items-center justify-center py-20 px-4" style="background: linear-gradient(135deg, #121212 0%, #1A1A2E 50%, #002244 100%);">
+        <div class="text-center max-w-3xl">
+            <img src="MG_1158-Enhanced-NR.jpg" alt="Photo de profil" class="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full mb-8 border-4 border-accent shadow-xl object-cover">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Salut, je suis <span class="accent-color">Abdoulaye Soumah</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">Etudiant en informatique | Passionné par l'innovation et la création de solutions numériques.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projets" class="bg-accent text-white font-semibold py-3 px-8 rounded-lg text-lg hover-bg-accent-darker transition duration-300 shadow-md hero-button">Voir mes projets</a>
+                <a href="CV_AS-.pdf" download="CV_Soumah.pdf" class="border-2 border-accent text-accent font-semibold py-3 px-8 rounded-lg text-lg hover:bg-accent hover:text-white transition duration-300 shadow-md hero-button flex items-center">
+                    <i class="fas fa-download mr-2"></i>Télécharger mon CV
+                </a>
+                <a href="#contact" class="border-2 border-accent text-accent font-semibold py-3 px-8 rounded-lg text-lg hover:bg-accent hover:text-white transition duration-300 shadow-md hero-button">Contactez-moi</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-propos" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <p class="section-subtitle max-w-2xl mx-auto">
+                Passionné par le développement web, la cybersécurité et l'IA. Compétences solides acquises via études et projets. Président/fondateur du Club Tech de l'UQO, développant leadership et innovation collaborative. Autonome et curieux, je me forme continuellement pour créer des solutions technologiques sécurisées et performantes
+            </p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold accent-color">Mon Parcours</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Actuellement étudiant en Baccalauréat en informatique à L'Université du Québec en Outaouais. 
+                        J'ai acquis des compétences solides en travail et gestion d'équipe  et j'ai travaillé sur plusieurs projets passionnants de développement.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        En dehors du code, j'aime faire des recherches sur le monde de la technologie. Cela m'aide à garder un esprit créatif et à aborder les défis sous différents angles.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold accent-color mb-4">Compétences Techniques</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">Java</span>
+                                <span class="text-sm font-medium text-blue-300">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">Python </span>
+                                <span class="text-sm font-medium text-blue-300">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">HTML & CSS (Tailwind)</span>
+                                <span class="text-sm font-medium text-blue-300">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">Cybersécurité</span>
+                                <span class="text-sm font-medium text-blue-300">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">Skills - Leardership</span>
+                                <span class="text-sm font-medium text-blue-300">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-base font-medium text-blue-300">C++</span>
+                                <span class="text-sm font-medium text-blue-300">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-20 px-4 bg-[#1A1A2E]">
+        <div class="container mx-auto">
+            <h2 class="section-title">Mes Projets Récents</h2>
+            <p class="section-subtitle max-w-2xl mx-auto">
+                Voici quelques projets sur lesquels j'ai travaillé.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <div>
+                        <img src="tableau_de_bord.png" alt="Aperçu du Projet 1" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 accent-color">Portail étudiant</h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            Application web de productivité étudiante conçue pour optimiser l'organisation et la gestion des études. Développée suite à un besoin personnel, elle intègre la gestion de notes et cours, de tâches, un calendrier et un système de notifications pour les échéances importantes
+                    </p>
+                        </p>
+                    </div>
+                    <div class="mt-auto"> <span class="tag">HTML</span>
+                        <span class="tag">CSS </span>
+                        <span class="tag">JS</span>
+                    </div>
+                    </div>
+                <div class="card">
+                    <div>
+                        <img src="Capture d'écran 2025-05-24 003726.png" alt="Aperçu du Projet 2" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 accent-color">Menu d'exercice </h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            Application console en C++ permettant de gérer un menu d'exercices. Conçue pour faciliter l'accès à divers exercices de programmation, elle offre une interface utilisateur simple et intuitive.
+                            <br>Le projet a été développé dans le cadre d'un cours de programmation avancée, mettant en pratique les concepts de structures de données et d'algorithmes.
+                             
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <span class="tag">C++</span>
+                        
+                    </div>
+                     </div>
+                <div class="card">
+                    <div>
+                        <img src="image-6-1024x582.png" alt="Aperçu du Projet 3" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 accent-color">Train de Paris</h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            Application de gestion de train développée en Java. Ce projet a été réalisé dans le cadre d'un cours de programmation orientée objet, mettant en pratique les concepts de classes, d'héritage et de polymorphisme.
+                            
+                            
+                        </p> 
+                    </div>
+                    <div class="mt-auto">
+                        <span class="tag">Java</span>
+
+                    </div>
+                     </div>
+                <div class="card">
+                    <div>
+                        <img src="R (2).png" alt="Aperçu du Projet 4" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 accent-color">Simalateur d'une defense DDOS| configuration d'un routeur, VLAN ,switch et appareil d'un reseaux...</h3>
+                        <p class="text-gray-400 text-sm mb-3">
+                            Simulation d'une défense contre les attaques DDoS à l'aide de Cisco Packet Tracer. Ce projet a été réalisé dans le cadre d'un cours de cybersécurité, mettant en pratique les concepts de sécurité réseau et de configuration d'équipements Cisco.
+                            <br>Il a permis de comprendre les mécanismes de défense contre les attaques par déni de service distribué (DDoS) et d'acquérir des compétences pratiques en configuration réseau.
+                            
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <span class="tag">CISCO packet Tracer</span>
+
+                    </div>
+                     </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="section-title">Contactez-Moi</h2>
+            <p class="section-subtitle">
+                N'hésitez pas à me laisser un message. Je serai ravi d'échanger avec vous !
+            </p>
+            <form action="#" method="POST" class="space-y-6 card">
+                 <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">Abdoulaye Soumah</label>
+                    <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm text-white">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300">abdoulayehamsou1@gmail.com</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm text-white">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm text-white"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-accent text-white font-semibold py-3 px-6 rounded-lg text-lg hover-bg-accent-darker transition duration-300 shadow-md">
+                        Envoyer le Message
+                    </button>
+                </div>
+            </form>
+             <div class="mt-12 text-center">
+                <p class="text-lg mb-2">Ou retrouvez-moi sur :</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/Soumah1" target="_blank" class="text-gray-400 hover:accent-color transition duration-300">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdoulaye-soumah-82b24b232/" target="_blank" class="text-gray-400 hover:accent-color transition duration-300">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1A1A2E] text-center py-8">
+        <p class="text-gray-400">SUMA_code</p>
+        <p class="text-sm text-gray-500 mt-1">Construit avec HTML et Tailwind CSS.</p>
+    </footer>
+
+    <script>
+        // Script pour le menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Change icon on click
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Fermer le menu mobile quand un lien est cliqué
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Mettre à jour l'année actuelle dans le pied de page
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
